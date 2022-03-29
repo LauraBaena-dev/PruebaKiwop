@@ -257,7 +257,7 @@ header .main-menuMobile .menuContent.isActive {
   height: 100vh;
   pointer-events: all;
 }
-header .main-menuMobile .menuContent.isActive ul {
+header .main-menuMobile .menuContent.isActive ul, header .main-menuMobile .menuContent.isActive .langSelectorMobile {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
   opacity: 1;
@@ -313,6 +313,40 @@ header .main-menuMobile .menuContent ul li.hasDropdownMobile .dropdown-menu.isAc
 }
 header .main-menuMobile .menuContent ul li.hasDropdownMobile .dropdown-menu li:last-of-type {
   padding-bottom: 0px;
+}
+header .main-menuMobile .menuContent .langSelectorMobile {
+  position: absolute;
+  bottom: 110px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  padding-left: 20px;
+}
+header .main-menuMobile .menuContent .langSelectorMobile a {
+  margin-right: 10px;
+  color: #707372;
+  text-decoration: none;
+}
+header .main-menuMobile .menuContent .langSelectorMobile a:hover {
+  text-decoration: underline;
+}
+header .main-menuMobile .menuContent .langSelectorMobile a:hover.active {
+  text-decoration: none;
+}
+header .main-menuMobile .menuContent .langSelectorMobile a.active {
+  color: #F2A900;
 }
 header .hasDropdown a, header .hasDropdown .link {
   padding-right: 7px;
@@ -754,6 +788,15 @@ footer .footerContainer .footerMenu.socialLinks ul li:last-of-type a {
   header .headerContainer .d-mobile {
     display: block;
   }
+
+  .blogContainer .item a {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  .blogContainer .itemWithImg a {
+    padding-bottom: 80px;
+  }
 }
 @media only screen and (max-width: 768px) {
   header .headerContainer {
@@ -762,6 +805,9 @@ footer .footerContainer .footerMenu.socialLinks ul li:last-of-type a {
 
   header .main-menuMobile .menuContent {
     top: 58px;
+  }
+  header .main-menuMobile .menuContent .langSelectorMobile {
+    bottom: 58px;
   }
 
   header .headerContainer .d-mobile {
