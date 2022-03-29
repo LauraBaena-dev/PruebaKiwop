@@ -1,0 +1,162 @@
+////// FONTS //////
+
+$font-standard: 'AktivGrotesk';
+$font-special: 'Tiempos';
+
+////// SIZES //////
+$font-size-extraBig: 40px;
+$font-size-big: 32px;
+$font-size-medium: 24px;
+$font-size-normal: 18px;
+$font-size-small: 16px;
+$font-size-extraSmall: 12px;
+
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+
+$max-page: 1440px;
+$padding-lateral: 24px;
+$padding-bottom: 120px;
+$margin-bottom: 160px;
+
+////// COLORS //////
+
+$color-primary-500:#F2A900;
+$color-primary-300: #FFD980;
+$color-primary-200: #FFE5A8;
+$color-primary-100: #FFF1D1;
+$color-secondary-blue-900: #01426A;
+$color-secondary-turq-700: #008C95;
+$color-basic-100: #FFFFFF;
+$color-basic-200: #F7F6F6;
+$color-basic-500: #707372;
+$color-basic-700: #404040;
+
+//GENERAL
+html{
+    font-size: $font-size-normal;
+    font-weight: $font-regular;
+    color: $color-basic-500;
+    line-height: 20px;
+    font-family: $font-standard;
+
+    &.noScroll{
+        overflow: hidden;
+    }
+    
+}
+
+body{
+    margin: 0px;
+}
+
+.container{
+    max-width: calc(#{$max-page} - 48px);
+    margin: auto;
+    padding-left: $padding-lateral;
+    padding-right: $padding-lateral;
+}
+
+p{
+    margin: 0px;
+}
+
+//LINKS AND BUTTONS
+a, .link{
+    display: block;
+    text-decoration: none;
+    transition:all 0.3s linear;
+
+    color: $color-primary-500;
+    font-size: $font-size-small;
+    font-family: $font-standard;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-weight: $font-bold;
+
+    text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.buttonContainer{
+    text-align: center;
+}
+button{
+    background-color: $color-primary-500;
+    border: transparent;
+    padding: 24px 40px;
+
+    font-family: $font-standard;
+    color: $color-basic-100;
+    font-size: $font-size-normal;
+    font-weight: $font-bold;
+    line-height: 21px;
+    letter-spacing: 0.09em;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition:all 0.3s linear;
+    &:hover{
+        cursor: pointer;
+        background-color: $color-primary-300;
+    }
+}
+
+//TITLES
+.title, h1{
+    color: $color-secondary-blue-900;
+    font-size: $font-size-extraBig;
+    font-family: $font-standard;
+    font-weight: $font-regular;
+    line-height: 51px;
+    margin-bottom: 24px;
+    span{
+        color: $color-primary-500;
+        font-family: $font-special;
+        font-weight: $font-light;
+    }
+}
+.titleContainer{
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .title{
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        max-width: calc(#{$max-page} - 40px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .title, h1{
+        font-size: $font-size-big;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .title, h1{
+        font-size: $font-size-medium;
+        line-height: 30px;
+    }
+    .titleContainer{
+        margin-bottom: 40px;
+    }
+    button{
+        padding: 20px;
+        font-size: $font-size-small;
+        line-height: 18px;
+    }
+    a, .link{
+        font-size: $font-size-extraSmall;
+        line-height: 16px;
+    }
+}

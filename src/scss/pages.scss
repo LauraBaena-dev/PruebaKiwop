@@ -1,0 +1,357 @@
+/*HOME*/
+main{
+    padding-top: 127px;
+    .initSection{
+        .initSectionContainer{
+            margin-bottom: $margin-bottom;
+            position: relative;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            .optionsInitSection{
+                background-color: $color-basic-200;
+                max-width: 944px;
+                width: 66vw;
+
+                position: absolute;
+                right: -24px;
+                bottom: -40px;
+
+                .optionsButtonsContainer{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .option{
+                        width: 33%;
+                        height: 8px;
+                        background-color: $color-primary-300;
+                        display: inline-block;
+                        transition: background-color 0.5s linear;
+                        &.isActive{
+                            background-color: $color-primary-500;
+                        }
+                    }
+                }
+                .optionsContentContainer{
+                    position: relative;
+                    margin: 56px  142px 64px 118px;
+                    .optionContent{
+                        position: absolute;
+                        opacity: 0;
+                        top: 0px;
+                        left: 0px;
+
+                        transition: opacity 0.5s linear;
+                        .optionTitle{
+                            color: $color-secondary-blue-900;
+                            font-size: $font-size-big;
+                            line-height: 40px;
+                            font-family: $font-standard;
+                            margin-bottom: 40px;
+                            font-weight: $font-regular;
+                        }
+                        &.isActive{
+                            position: relative;
+                            opacity: 1;
+
+                            transition: opacity 0.5s linear;
+                            transition-delay: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .secondSection{
+        margin-bottom: $margin-bottom;
+        .text{
+            max-width: 920px;
+            margin: auto;
+
+            text-align: center;
+            color: $color-basic-500;
+            font-size: $font-size-medium;
+            font-family: $font-standard;
+            font-weight: $font-regular;
+            line-height: 30px;
+        }
+    }
+    .thirdSection{
+        margin-bottom: $margin-bottom;
+        max-width: calc(#{$max-page} - 24px);
+        padding-right: 0px;
+        .thirdSectionContainer{
+            padding-left: 118px;
+            overflow-x: hidden;
+            //padding-right: 118px;
+            .title{
+                max-width: 684px;
+                margin: auto;
+                margin-left: 0px;
+                margin-bottom: 64px;
+                span{
+                    letter-spacing: 0.05em;
+                }
+            }
+            .navCarousel{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-left: -142px;
+                .navDot{
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid $color-primary-500;
+                    margin-right: 16px;
+                    cursor: pointer;
+                    &:last-of-type{
+                        margin-right: 0px;
+                    }
+                    &.active{
+                        background-color: $color-primary-500;
+                    }
+                }
+            }
+            button{
+                margin-top: 66px;
+                margin-left: -142px;
+            }
+        }
+    }
+    .fourthSection{
+        background-color: $color-basic-200;
+        text-align: center;
+        padding-top: $padding-bottom;
+        padding-bottom: $padding-bottom;
+        .fourthSectionContainer{
+            .text{
+                color: $color-basic-500;
+                font-size: $font-size-small;
+                font-family: $font-standard;
+                font-weight: $font-regular;
+                line-height: 24px;
+
+                max-width: 684px;
+                margin: auto;
+                margin-bottom: 71px;
+            }
+            button{
+                margin-top: 71px;
+            }
+        }
+    }
+    .fifthSection{
+        margin-top: $margin-bottom;
+        margin-bottom: $margin-bottom;
+        .fifthSectionContainer{
+            padding-left: 118px;
+            padding-right: 118px;
+        }
+    }
+    .sixthSection{
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+
+            bottom: -160px;
+            left: 0px;
+            width: 100%;
+            height: 365px;
+
+            background-color: rgba($color-basic-100, 0.9);
+        }
+        .sixthSectionContainer{
+            margin-bottom: $margin-bottom;
+            max-width: calc(#{$max-page} - 24px);
+            padding-right: 0px;
+            position: relative;
+            z-index: 100;
+            .titleContainer{
+                padding-left: 118px;
+                padding-right: 142px;
+            }
+            .noticiasContainer{
+                overflow-x: scroll;
+                margin-left: 118px;
+                margin-right: 142px;
+
+                //change scrollbar on desktop
+                /* Works on Firefox */
+                &{
+                    scrollbar-width: thin;
+                    scrollbar-color: $color-primary-500 $color-primary-200;
+                }
+                
+                /* Works on Chrome, Edge, and Safari */
+                &::-webkit-scrollbar {
+                    height: 4px;
+                }
+                
+                &::-webkit-scrollbar-track {
+                    background: $color-primary-200;
+                    border-radius: 0px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background-color: $color-primary-500;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+    .seventhSection{
+        background-color: $color-secondary-blue-900;
+        padding-top: $padding-bottom;
+        padding-bottom: $padding-bottom;
+
+        overflow-x: clip;
+        .seventhSectionContainer{
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                border: 17px solid $color-primary-500;
+                position: absolute;
+                pointer-events: none;
+                z-index: 1;
+
+                bottom: 20px;
+                left: -300px;
+                transform: translate(0%, 100%);
+
+                width: 360px;
+                height: 360px;
+            }
+            &::after{
+                content: '';
+                display: block;
+                border: 17px solid $color-primary-500;
+                position: absolute;
+                pointer-events: none;
+
+                top: 20px;
+                right: -300px;
+                transform: translate(0%, -100%);
+
+                width: 360px;
+                height: 360px;
+            }
+        }
+        .title{
+            max-width: 684px;
+            margin: auto;
+            margin-bottom: 64px;
+            color: $color-basic-100;
+
+            text-align: center;
+        }
+    }
+}
+
+//RESPONSIVE
+@media only screen and (max-width: 1400px) {
+    main{
+        padding-top: 103px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    main{
+        .initSection .initSectionContainer .optionsInitSection .optionsContentContainer{
+            margin: 40px;
+        }
+        .secondSection .text{
+            font-size: 24px;
+        }
+        .initSection .initSectionContainer .optionsInitSection{
+            right: -20px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    main{
+        padding-top: 70px;
+        .initSection .initSectionContainer .optionsInitSection{
+            position: relative;
+            width: 100%;
+            left: unset;
+            right: unset;
+            top: unset;
+            bottom: unset;
+            padding-bottom: 20px;
+            .optionsContentContainer{
+                margin: 20px;
+                margin-bottom: 0px;
+                .optionContent{
+                    .optionTitle{
+                        margin-bottom: 20px;
+                        font-size: $font-size-medium;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .initSection .initSectionContainer, .secondSection, .thirdSection, .fifthSection, .sixthSection .sixthSectionContainer{
+            margin-bottom: 60px;
+        }
+        .thirdSection{
+            max-width: calc(#{$max-page} - 20px);
+            padding-top: 40px;
+        }
+        .thirdSection .thirdSectionContainer{
+            padding-left: 0px;
+            .title{
+                margin-bottom: 20px;
+            }
+        }
+        .thirdSection .thirdSectionContainer .navCarousel, .thirdSection .thirdSectionContainer button{
+            margin-left: 0px;
+        }
+        .fourthSection{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .fifthSection{
+            margin-top: 60px;
+            .fifthSectionContainer{
+                padding: 0px;
+            }
+        }
+        .sixthSection .sixthSectionContainer{
+            max-width: calc(#{$max-page} - 20px);
+        }
+        .sixthSection .sixthSectionContainer .titleContainer{
+            padding: 0px;
+            padding-right: 20px;
+        }
+        .sixthSection .sixthSectionContainer .noticiasContainer{
+            margin: 0px;
+            margin-right: 20px;
+        }
+        .sixthSection::after{
+            bottom: -60px;
+        }
+        .seventhSection{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .seventhSection .seventhSectionContainer::before{
+            bottom: -26px;
+            left: -126px;
+            width: 200px;
+            height: 200px;
+        }
+        .seventhSection .seventhSectionContainer::after{
+            right: -140px;
+            top: -32px;
+            width: 200px;
+            height: 200px;
+        }
+    }   
+}

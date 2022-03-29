@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('AktivGroteskCorp-Bold.eot');
+    src: url('AktivGroteskCorp-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AktivGroteskCorp-Bold.woff2') format('woff2'),
+        url('AktivGroteskCorp-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('AktivGroteskCorp-Regular.eot');
+    src: url('AktivGroteskCorp-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AktivGroteskCorp-Regular.woff2') format('woff2'),
+        url('AktivGroteskCorp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Tiempos';
+    src: url('TiemposHeadline-Light.eot');
+    src: url('TiemposHeadline-Light.eot?#iefix') format('embedded-opentype'),
+        url('TiemposHeadline-Light.woff2') format('woff2'),
+        url('TiemposHeadline-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
