@@ -1111,7 +1111,7 @@ main .seventhSection {
   background-color: #01426A;
   padding-top: 120px;
   padding-bottom: 120px;
-  overflow-x: clip;
+  overflow-x: clip support;
 }
 main .seventhSection .seventhSectionContainer {
   position: relative;

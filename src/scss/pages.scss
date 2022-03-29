@@ -211,7 +211,7 @@ main{
         padding-top: $padding-bottom;
         padding-bottom: $padding-bottom;
 
-        overflow-x: clip;
+        overflow-x: clip support;
         .seventhSectionContainer{
             position: relative;
             &::before{
