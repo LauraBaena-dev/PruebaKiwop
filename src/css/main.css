@@ -1111,7 +1111,10 @@ main .seventhSection {
   background-color: #01426A;
   padding-top: 120px;
   padding-bottom: 120px;
-  overflow-x: clip support;
+  overflow-x: clip;
+}
+main .seventhSection.safariClass {
+  overflow: hidden;
 }
 main .seventhSection .seventhSectionContainer {
   position: relative;

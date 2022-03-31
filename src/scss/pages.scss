@@ -211,7 +211,10 @@ main{
         padding-top: $padding-bottom;
         padding-bottom: $padding-bottom;
 
-        overflow-x: clip support;
+        overflow-x: clip;
+        &.safariClass{
+            overflow: hidden;
+        }
         .seventhSectionContainer{
             position: relative;
             &::before{

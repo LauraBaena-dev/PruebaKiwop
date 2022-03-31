@@ -3,6 +3,12 @@ $(window).on('load',function(){
     loopOptions();
     sliderIndustria();
     menuMobile();
+
+    var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if(is_safari){
+        $('.seventhSection').addClass('safariClass');
+    }
 });
 
 
